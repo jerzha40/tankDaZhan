@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ckmsugjx7jnct"]
+
+[ext_resource type="PackedScene" uid="uid://2tlt1pgk8405" path="res://assets/model-ChildeDuck-Vivian-ZZZ-4_5_2.blend" id="1_sanam"]
+
+[node name="Node3D" type="Node3D" unique_id=596456914]
+
+[node name="model" parent="." unique_id=658986849 instance=ExtResource("1_sanam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017315507, 0, 0.41332173)

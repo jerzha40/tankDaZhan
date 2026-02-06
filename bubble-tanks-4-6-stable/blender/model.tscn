@@ -1,0 +1,395 @@
+[gd_scene format=3 uid="uid://54pmhavd7svw"]
+
+[ext_resource type="PackedScene" uid="uid://2tlt1pgk8405" path="res://assets/model-ChildeDuck-Vivian-ZZZ-4_5_2.blend" id="1_23tpf"]
+[ext_resource type="Shader" uid="uid://d270ynirco23h" path="res://blender/model.tres" id="2_ny4l1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23tpf"]
+render_priority = 0
+shader = ExtResource("2_ny4l1")
+
+[node name="model" unique_id=658986849 instance=ExtResource("1_23tpf")]
+
+[node name="控制灯光的" parent="." index="0" unique_id=1102509981]
+visible = false
+
+[node name="cs_grp" parent="char_grp" parent_id_path=PackedInt32Array(29211199) index="0" unique_id=1792945048]
+visible = false
+
+[node name="leg_stretch_r" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="0" unique_id=172713849]
+transform = Transform3D(-0.35738423, -0.019901393, 0.9337453, -0.93110406, -0.070497364, -0.35787588, 0.07294882, -0.9973132, 0.00666438, 0.07291251, -0.0111169, 0.4477304)
+
+[node name="leg_twist_r" parent="char_grp/rig/c_pos/c_traj/leg_stretch_r" index="0" unique_id=1672059897]
+transform = Transform3D(-0.5260772, -0.60566443, -0.5970038, 0.6305511, -0.7488407, 0.20406508, -0.57065576, -0.2690876, 0.77585053, -5.5879354e-09, 0.19362935, 1.4901161e-08)
+
+[node name="_shadow_足首D_R" parent="char_grp/rig/c_pos/c_traj/leg_stretch_r" index="2" unique_id=54626796]
+transform = Transform3D(0.35738608, 0.07294926, -0.93110424, 0.019901866, -0.9973133, -0.0704977, -0.9337525, 0.006664138, -0.35787508, 6.9849193e-09, 0.38725835, 1.4842954e-09)
+
+[node name="thigh_stretch_r" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="1" unique_id=1547737917]
+transform = Transform3D(-0.37479228, -0.013202298, 0.92701477, -0.92710316, 0.008811708, -0.37470254, -0.0032216478, -0.9998739, -0.015542456, 0.07547515, -0.012827337, 0.6418104)
+
+[node name="_dummy_足D_R" parent="char_grp/rig/c_pos/c_traj/thigh_stretch_r" index="0" unique_id=975637510]
+transform = Transform3D(-0.7189268, 0.018838445, 0.6948305, 0.02631751, 0.9996536, 0.00012728853, -0.6945873, 0.018377718, -0.71917367, 4.4237822e-09, -0.19410452, 3.7252903e-09)
+
+[node name="_shadow_ひざD_R" parent="char_grp/rig/c_pos/c_traj/thigh_stretch_r" index="1" unique_id=740701300]
+transform = Transform3D(-0.7189268, 0.01883844, 0.6948305, 0.026317509, 0.9996535, 0.00012729598, -0.6945873, 0.018377721, -0.71917367, -8.032657e-09, 0.38820887, -0.0040803184)
+
+[node name="leg_stretch_l" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="2" unique_id=1260544004]
+transform = Transform3D(-0.35738423, 0.01990152, -0.93374527, 0.93110406, -0.07049769, -0.35787588, -0.07294918, -0.9973131, 0.0066643795, -0.07291256, -0.011116907, 0.4477304)
+
+[node name="_shadow_足首D_L" parent="char_grp/rig/c_pos/c_traj/leg_stretch_l" index="2" unique_id=1871749629]
+transform = Transform3D(0.35738596, -0.07294927, 0.9311043, -0.019901859, -0.99731314, -0.07049772, 0.9337521, 0.0066641406, -0.3578751, 1.3038516e-08, 0.38725832, 1.9499566e-09)
+
+[node name="thigh_stretch_l" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="3" unique_id=1569196484]
+transform = Transform3D(-0.37479186, 0.0132022565, -0.9270149, 0.92710334, 0.008811818, -0.3747021, 0.003221774, -0.9998738, -0.015542458, -0.07547517, -0.012827344, 0.6418104)
+
+[node name="arm_stretch_l" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="4" unique_id=67443111]
+transform = Transform3D(-0.2525607, -0.74081534, -0.6224191, 0.9241113, 0.0059633665, -0.38207683, 0.28676015, -0.6716822, 0.68308973, -0.18327783, -0.036939263, 1.1234014)
+
+[node name="forearm_stretch_l" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="5" unique_id=167748574]
+transform = Transform3D(-0.20536262, -0.74314684, -0.63683504, 0.922087, 0.07115649, -0.38038418, 0.32799625, -0.665334, 0.6706333, -0.26413634, -0.036288366, 1.0500886)
+
+[node name="forearm_twist_l" parent="char_grp/rig/c_pos/c_traj/forearm_stretch_l" index="0" unique_id=1352084209]
+transform = Transform3D(-0.3916218, -8.16039e-08, 0.9201262, -4.720091e-07, 0.9999999, -1.1220758e-07, -0.92012626, -4.7825085e-07, -0.39162177, -5.5879354e-09, 0.089367464, 2.3283064e-08)
+
+[node name="forearm_l" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="6" unique_id=1894299870]
+transform = Transform3D(-0.20536265, -0.7431467, -0.63683504, 0.92208695, 0.07115659, -0.3803842, 0.32799634, -0.66533405, 0.67063314, -0.26413634, -0.036288366, 1.0500886)
+
+[node name="hand_l" parent="char_grp/rig/c_pos/c_traj/forearm_l" index="0" unique_id=2094535033]
+transform = Transform3D(-0.3869358, 0.017116316, 0.9219478, 0.1542401, 0.9869426, 0.046410657, -0.9091152, 0.16015923, -0.38452357, -2.4214387e-08, 0.178735, 8.381903e-09)
+
+[node name="ダミー_L" parent="char_grp/rig/c_pos/c_traj/forearm_l/hand_l" index="6" unique_id=1336612904]
+transform = Transform3D(0.023832995, 0.9897925, 0.14050967, 0.021699574, -0.14102867, 0.9897677, 0.9994806, -0.02054015, -0.024839208, 0.015610217, 0.03311838, -0.00036509428)
+
+[node name="arm_stretch_r" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="7" unique_id=1820579120]
+transform = Transform3D(-0.25256053, 0.74081546, 0.6224192, -0.9241113, 0.005963587, -0.38207686, -0.28676033, -0.67168206, 0.6830898, 0.18327728, -0.036939293, 1.1234019)
+
+[node name="_dummy_腕捩1_R" parent="char_grp/rig/c_pos/c_traj/arm_stretch_r/腕捩_R" parent_id_path=PackedInt32Array(612193162) index="0" unique_id=1804140763]
+transform = Transform3D(-0.019478004, -0.015392954, 0.999692, -0.78433365, -0.6198422, -0.024826115, 0.62003314, -0.7845757, 7.547465e-08, 0, 7.0780516e-08, -1.5977255e-08)
+
+[node name="_dummy_腕捩2_R" parent="char_grp/rig/c_pos/c_traj/arm_stretch_r/腕捩_R" parent_id_path=PackedInt32Array(612193162) index="1" unique_id=803746046]
+transform = Transform3D(-0.019477976, -0.015393082, 0.9996917, -0.7843337, -0.61984205, -0.024826167, 0.62003314, -0.78457546, -4.3697913e-08, 0, 7.0780516e-08, -1.5977255e-08)
+
+[node name="_dummy_腕捩3_R" parent="char_grp/rig/c_pos/c_traj/arm_stretch_r/腕捩_R" parent_id_path=PackedInt32Array(612193162) index="2" unique_id=151657499]
+transform = Transform3D(-0.019477637, -0.015393128, 0.9996919, -0.78433347, -0.6198423, -0.024825934, 0.6200333, -0.7845754, -2.8204303e-07, 0, 7.0780516e-08, -1.5977255e-08)
+
+[node name="forearm_stretch_r" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="8" unique_id=765253873]
+transform = Transform3D(-0.20536256, 0.74314684, 0.63683504, -0.9220869, 0.0711567, -0.3803843, -0.32799643, -0.665334, 0.6706332, 0.26413634, -0.036288366, 1.0500886)
+
+[node name="forearm_twist_r" parent="char_grp/rig/c_pos/c_traj/forearm_stretch_r" index="0" unique_id=171491494]
+transform = Transform3D(-0.39162207, 9.5198814e-08, -0.9201263, 4.0678398e-07, 1, -6.967168e-08, 0.9201263, -4.015775e-07, -0.39162207, 3.1664968e-08, 0.08936749, -9.2200935e-08)
+
+[node name="_dummy_手捩1_R" parent="char_grp/rig/c_pos/c_traj/forearm_stretch_r/手捩_R" parent_id_path=PackedInt32Array(1450028247) index="0" unique_id=1360666835]
+transform = Transform3D(0.03580942, 0.02830284, 0.9989576, -0.7837256, -0.61942774, 0.04564389, 0.6200742, -0.7845431, 3.1358923e-07, 4.656613e-09, 3.3760443e-08, -1.6556593e-08)
+
+[node name="_dummy_手捩2_R" parent="char_grp/rig/c_pos/c_traj/forearm_stretch_r/手捩_R" parent_id_path=PackedInt32Array(1450028247) index="1" unique_id=539345151]
+transform = Transform3D(0.036154293, 0.0283028, 0.99894524, -0.78370965, -0.6194278, 0.045914438, 0.6200741, -0.78454316, -0.00021379864, 4.656613e-09, 3.3760443e-08, -1.6556593e-08)
+
+[node name="_dummy_手捩3_R" parent="char_grp/rig/c_pos/c_traj/forearm_stretch_r/手捩_R" parent_id_path=PackedInt32Array(1450028247) index="2" unique_id=1420965163]
+transform = Transform3D(0.035810024, 0.028302616, 0.998958, -0.78372514, -0.6194286, 0.045644235, 0.6200748, -0.7845429, -2.8183598e-07, 4.656613e-09, 3.3760443e-08, -1.6556593e-08)
+
+[node name="forearm_r" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="9" unique_id=519341632]
+transform = Transform3D(-0.20536305, 0.74314666, 0.63683516, -0.9220869, 0.07115648, -0.38038462, -0.3279965, -0.6653343, 0.67063296, 0.26413634, -0.036288366, 1.0500886)
+
+[node name="hand_r" parent="char_grp/rig/c_pos/c_traj/forearm_r" index="0" unique_id=1512720647]
+transform = Transform3D(-0.38693592, -0.01711639, -0.92194766, -0.15424001, 0.9869428, 0.046410557, 0.9091152, 0.16015914, -0.38452366, -9.313226e-09, 0.17873503, -4.5634806e-08)
+
+[node name="親指先_R" parent="char_grp/rig/c_pos/c_traj/forearm_r/hand_r" index="7" unique_id=100383330]
+transform = Transform3D(-2.4214393e-07, 0.8392178, 0.54379576, 0.025088117, -0.5436247, 0.8389536, 0.9996854, 0.013643014, -0.021054255, -0.030551957, 0.08605876, 0.046432)
+
+[node name="人指先_R" parent="char_grp/rig/c_pos/c_traj/forearm_r/hand_r" index="8" unique_id=1999544738]
+transform = Transform3D(0, 0.83921736, 0.5437959, 0.025088117, -0.54362464, 0.8389535, 0.99968517, 0.013642812, -0.02105439, -0.01598996, 0.1375459, 0.020513851)
+
+[node name="中指先_R" parent="char_grp/rig/c_pos/c_traj/forearm_r/hand_r" index="9" unique_id=766209203]
+transform = Transform3D(-3.3527616e-08, 0.83921766, 0.5437958, 0.025087992, -0.54362476, 0.8389534, 0.99968535, 0.013642775, -0.021054259, -0.018253563, 0.14575122, 0.0014901645)
+
+[node name="薬指先_R" parent="char_grp/rig/c_pos/c_traj/forearm_r/hand_r" index="10" unique_id=1560373841]
+transform = Transform3D(-3.3527613e-08, 0.8392175, 0.54379576, 0.025087988, -0.54362464, 0.83895326, 0.9996852, 0.013642772, -0.021054257, -0.015972553, 0.13516824, -0.016096625)
+
+[node name="小指先_R" parent="char_grp/rig/c_pos/c_traj/forearm_r/hand_r" index="11" unique_id=288230060]
+transform = Transform3D(-2.3841864e-07, 0.8392176, 0.5437959, 0.025088122, -0.54362476, 0.8389535, 0.9996854, 0.013643017, -0.02105426, -0.014946725, 0.11827415, -0.03127788)
+
+[node name="c_root_master_x" parent="char_grp/rig/c_pos/c_traj" parent_id_path=PackedInt32Array(1363889007) index="10" unique_id=1618860860]
+transform = Transform3D(-0.9870227, 0.1503674, -0.056355175, 1.4156103e-07, 0.35094634, 0.9363956, 0.160581, 0.9242438, -0.346392, -0.0009341616, 0.018694624, 0.9531507)
+
+[node name="足D_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x" parent_id_path=PackedInt32Array(2090005374) index="3" unique_id=1881329372]
+transform = Transform3D(0.98702276, 0.16058113, -1.4139182e-07, 0.15036742, -0.92424345, -0.35094658, -0.05635552, 0.34639207, -0.93639576, -0.09677685, 0.11437676, -0.0050487886)
+
+[node name="ひざD_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_R" index="0" unique_id=1815386845]
+transform = Transform3D(1, -5.2386884e-08, 2.8532534e-15, 5.2386884e-08, 1, -6.111804e-08, 3.4853013e-16, 6.111804e-08, 1, 0.007252522, -0.38813, 0.0036014614)
+
+[node name="Belt_Root_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_R" index="1" unique_id=1540971109]
+transform = Transform3D(0.643274, -0.59726554, -0.47903305, -0.4790329, -0.80204374, 0.35672617, -0.5972657, -5.960465e-08, -0.80204356, -0.016091593, 0.047893755, 0.038369566)
+
+[node name="Sub_Knee_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_R" index="2" unique_id=995455950]
+transform = Transform3D(0.9956487, -0.07334345, -0.05748112, -0.057481907, -0.9689134, 0.2406288, -0.073342904, -0.23627806, -0.9689118, 0.0108820265, -0.37191957, -0.0051757423)
+
+[node name="足D_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x" parent_id_path=PackedInt32Array(2090005374) index="4" unique_id=1507166514]
+transform = Transform3D(0.98702276, 0.16058113, -1.4139182e-07, 0.15036742, -0.92424345, -0.35094658, -0.05635552, 0.34639207, -0.93639576, 0.057273243, 0.13784549, -0.013844535)
+
+[node name="ひざD_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_L" index="0" unique_id=390382388]
+transform = Transform3D(1, -5.2386884e-08, 2.8532534e-15, 5.2386884e-08, 1, -6.111804e-08, 3.4853013e-16, 6.111804e-08, 1, -0.007252373, -0.38813, 0.0036014614)
+
+[node name="Belt_Root_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_L" index="1" unique_id=875794704]
+transform = Transform3D(0.6432738, 0.59726566, 0.4790328, 0.4790329, -0.8020435, 0.3567262, 0.5972653, -1.1920928e-07, -0.80204356, 0.0160916, 0.04789377, 0.038369566)
+
+[node name="Sub_Knee_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/足D_L" index="2" unique_id=2013181260]
+transform = Transform3D(0.9956487, 0.07334345, 0.05748113, 0.057481907, -0.96891344, 0.24062878, 0.0733429, -0.23627803, -0.96891195, -0.010881961, -0.37191957, -0.005175741)
+
+[node name="_shadow_足D_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x" parent_id_path=PackedInt32Array(2090005374) index="12" unique_id=704475740]
+transform = Transform3D(0.98702294, 0.16058101, -3.6464613e-07, 0.15036723, -0.92424375, -0.35094666, -0.056355678, 0.34639207, -0.9363962, -0.09677686, 0.11437682, -0.005048816)
+
+[node name="_shadow_足D_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x" parent_id_path=PackedInt32Array(2090005374) index="13" unique_id=1735718772]
+transform = Transform3D(0.98702294, 0.16058101, -3.6464613e-07, 0.15036723, -0.92424375, -0.35094666, -0.056355678, 0.34639207, -0.9363962, 0.05727325, 0.13784555, -0.01384454)
+
+[node name="thigh_ik_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r" parent_id_path=PackedInt32Array(1550965120) index="0" unique_id=421125929]
+transform = Transform3D(1, -5.0291412e-08, -6.1108956e-08, 5.0291415e-08, 0.99999994, 2.7823264e-08, 6.1108956e-08, -2.7823265e-08, 1, 1.1641532e-09, 0.05545851, -2.3283064e-09)
+
+[node name="leg_ik_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/thigh_ik_r" index="0" unique_id=1410598976]
+transform = Transform3D(0.9969394, 0.076030575, -0.01819399, -0.0764263, 0.9968294, -0.022144893, 0.016452612, 0.023467623, 0.9995892, -1.6298145e-09, 0.38820893, 9.313226e-10)
+
+[node name="thigh_ik_nostr_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r" parent_id_path=PackedInt32Array(1550965120) index="1" unique_id=1130449322]
+transform = Transform3D(1, -1.21654e-07, -1.0607255e-07, 1.2165401e-07, 0.99999994, -5.6345026e-08, 1.06072555e-07, 5.634501e-08, 1, 1.1641532e-09, 0.05545851, -2.3283064e-09)
+
+[node name="leg_ik_nostr_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/thigh_ik_nostr_r" index="0" unique_id=290943267]
+transform = Transform3D(0.9969394, 0.076030575, -0.01819399, -0.0764263, 0.9968294, -0.022144893, 0.016452612, 0.023467623, 0.9995892, -1.6298145e-09, 0.38820893, 9.313226e-10)
+
+[node name="foot_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r/leg_fk_r" parent_id_path=PackedInt32Array(1389258777) index="0" unique_id=1090705292]
+transform = Transform3D(-0.283999, -0.88715714, -0.36372608, -0.014366744, 0.38324055, -0.9235367, 0.9587168, -0.25705802, -0.12158548, -2.3283064e-09, 0.3872583, -4.3364707e-09)
+
+[node name="toes_01_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r/leg_fk_r/foot_r" index="0" unique_id=1805384290]
+transform = Transform3D(-1, -1.4223099e-08, 1.3430887e-06, -1.4223223e-08, 0.99999994, -9.1036775e-08, -1.3430887e-06, -9.103679e-08, -1, -2.0954758e-09, 0.09751679, 2.3283064e-10)
+
+[node name="つま先_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r/leg_fk_r/foot_r" index="2" unique_id=1176422604]
+transform = Transform3D(-0.99698, -7.4505806e-08, -0.077656105, -0.06940213, -0.44864115, 0.8910134, -0.034839787, 0.8937119, 0.44728646, 0.003383949, 0.09774643, 8.946308e-05)
+
+[node name="_dummy_足首D_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r/leg_fk_r/foot_r" index="3" unique_id=628095464]
+transform = Transform3D(-0.99698013, -1.937151e-07, -0.077656016, -0.06940201, -0.44864103, 0.8910132, -0.034839865, 0.893712, 0.44728625, -1.1641532e-09, 1.4901161e-08, 1.2805685e-08)
+
+[node name="leg_fk_pre_pole_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r" parent_id_path=PackedInt32Array(946874936) index="2" unique_id=2117809061]
+transform = Transform3D(0.13489135, -0.9604524, 0.24358846, -0.889516, -0.009072271, 0.4568137, -0.4365379, -0.27829605, -0.85556173, 0.01483468, 0.00014018547, 0.004298413)
+
+[node name="leg_fk_pole_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/c_thigh_fk_r/c_leg_fk_r/leg_fk_pre_pole_r" index="0" unique_id=935796287]
+transform = Transform3D(-0.5133189, 0.727059, -0.45594877, 0.7844505, 0.61297965, 0.09430624, 0.3480534, -0.3092602, -0.8849955, 0.020983946, 0.43183866, -0.15152481)
+
+[node name="thigh_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r" parent_id_path=PackedInt32Array(1550965120) index="3" unique_id=166667552]
+transform = Transform3D(1, -1.21654e-07, -1.0607255e-07, 1.2165401e-07, 0.99999994, -5.6345026e-08, 1.06072555e-07, 5.634501e-08, 1, 1.1641532e-09, 0.05545851, -2.3283064e-09)
+
+[node name="leg_pole_line_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/thigh_r/c_stretch_leg_r" parent_id_path=PackedInt32Array(342561431) index="0" unique_id=1827740308]
+transform = Transform3D(0.9841442, 0.020478504, 0.17618378, -0.02075377, 0.9997845, -0.0002803227, -0.17615156, -0.0033806004, 0.9843572, 4.1909516e-09, 1.6123522e-08, 1.2747478e-08)
+
+[node name="leg_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r/thigh_r" index="1" unique_id=1474515771]
+transform = Transform3D(0.9969394, 0.076030575, -0.01819399, -0.0764263, 0.9968294, -0.022144893, 0.016452612, 0.023467623, 0.9995892, -1.6298145e-09, 0.38820893, 9.313226e-10)
+
+[node name="thigh_twist_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_r" parent_id_path=PackedInt32Array(1550965120) index="4" unique_id=1444817511]
+transform = Transform3D(1, -1.1955852e-07, -1.06057996e-07, 1.1955854e-07, 0.99999994, -5.622861e-08, 1.06058e-07, 5.6228593e-08, 1, 1.1641532e-09, 0.05545851, -2.3283064e-09)
+
+[node name="leg_ik_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/thigh_ik_l" parent_id_path=PackedInt32Array(1889448008) index="0" unique_id=696760511]
+transform = Transform3D(0.99693936, -0.07603065, 0.018193936, 0.07642637, 0.9968293, -0.022144616, -0.016452579, 0.02346734, 0.9995892, 2.2118911e-09, 0.38820887, 6.0535967e-09)
+
+[node name="foot_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/leg_fk_l" parent_id_path=PackedInt32Array(815389856) index="0" unique_id=308836568]
+transform = Transform3D(-0.283996, 0.88715804, 0.3637262, 0.014366506, 0.3832402, -0.92353684, -0.9587178, -0.25705528, -0.12158403, -6.0535967e-09, 0.3872581, 3.1723175e-09)
+
+[node name="toes_01_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/leg_fk_l/foot_l" index="0" unique_id=271442249]
+transform = Transform3D(-1, 8.4331305e-08, -1.5815073e-06, 8.433128e-08, 1, 1.1758014e-08, 1.5815073e-06, 1.1757881e-08, -1, 3.887009e-09, 0.09751679, -1.3969839e-09)
+
+[node name="足先EX_L_qr_offset" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/leg_fk_l/foot_l/toes_01_l" index="5" unique_id=1250835902]
+transform = Transform3D(-0.99698055, -0.07765118, 3.1179966e-06, -0.06939839, 0.8910027, -0.44866195, 0.034836356, -0.44730726, -0.8937017, -1.6222526e-09, 5.122274e-09, 1.3969839e-09)
+
+[node name="foot_pole_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/leg_fk_l/foot_l" index="1" unique_id=1921905794]
+transform = Transform3D(-0.28399587, 0.014366626, -0.95871776, 0.88715804, 0.38324028, -0.25705516, 0.36372626, -0.9235369, -0.12158413, -0.026228227, 0.08690662, 0.023076033)
+
+[node name="足首_L_qr_offset" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/leg_fk_l/foot_l" index="4" unique_id=570568205]
+transform = Transform3D(-0.8921302, -0.0345961, -0.45045167, -0.03129523, 0.9994005, -0.014776217, 0.45069307, 0.00091467943, -0.8926784, 7.868414e-09, 4.656613e-10, 1.3969839e-09)
+
+[node name="c_foot_fk_scale_fix_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l" parent_id_path=PackedInt32Array(1214026346) index="1" unique_id=125466222]
+transform = Transform3D(-0.28399354, 0.95604646, -0.072954655, 0.014390188, -0.07182904, -0.9973129, -0.9587182, -0.28428024, 0.006641294, 1.8626451e-09, 0.38725814, -1.9790605e-09)
+
+[node name="c_toes_fk_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l/c_foot_fk_scale_fix_l/c_foot_fk_l/foot_fk_l" parent_id_path=PackedInt32Array(1518729541) index="0" unique_id=120219955]
+transform = Transform3D(-1, 7.03223e-08, -8.662515e-07, 7.032231e-08, 1, -1.0593764e-08, 8.662515e-07, -1.0593825e-08, -1, 5.626917e-09, 0.0975168, -1.1641532e-09)
+
+[node name="leg_fk_pre_pole_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/c_thigh_fk_l/c_leg_fk_l" parent_id_path=PackedInt32Array(1214026346) index="2" unique_id=2111148694]
+transform = Transform3D(0.13489918, 0.9604535, -0.24357972, 0.88949835, -0.009072516, 0.4568479, 0.43657133, -0.27829224, -0.8555458, -0.014834693, 0.0001401935, 0.004298358)
+
+[node name="leg_pole_line_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/thigh_l/c_stretch_leg_l" parent_id_path=PackedInt32Array(567100496) index="0" unique_id=1071854744]
+transform = Transform3D(0.9841431, -0.02047835, -0.1761913, 0.020753633, 0.9997847, -0.0002803557, 0.1761591, -0.0033806998, 0.984356, 3.7252903e-09, 2.73576e-08, -2.6833732e-08)
+
+[node name="leg_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/thigh_l" parent_id_path=PackedInt32Array(930687748) index="1" unique_id=1284491486]
+transform = Transform3D(0.99693936, -0.07603065, 0.018193936, 0.07642637, 0.9968293, -0.022144616, -0.016452579, 0.02346734, 0.9995892, 2.2118911e-09, 0.38820887, 6.0535967e-09)
+
+[node name="leg_ik_nostr_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_root_x/root_x/c_thigh_b_l/thigh_ik_nostr_l" parent_id_path=PackedInt32Array(229939242) index="0" unique_id=1453017406]
+transform = Transform3D(0.99693936, -0.07603065, 0.018193936, 0.07642637, 0.9968293, -0.022144616, -0.016452579, 0.02346734, 0.9995892, 2.2118911e-09, 0.38820887, 6.0535967e-09)
+
+[node name="arm_ik_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r" parent_id_path=PackedInt32Array(2035403215) index="0" unique_id=505550017]
+transform = Transform3D(0.935104, -0.041284904, 0.35196033, -0.18047422, 0.7992615, 0.57324517, -0.30497473, -0.59956366, 0.7399417, -2.8951774e-10, 0.08656909, 5.2416e-08)
+
+[node name="shoulder_track_pole_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r/shoulder_r" parent_id_path=PackedInt32Array(1081795365) index="0" unique_id=1840635588]
+transform = Transform3D(0.93544894, -0.03261057, 0.35195422, -0.18676935, 0.7997707, 0.5705122, -0.3000874, -0.59941936, 0.7420539, -8.830298e-09, 0.04001814, 0.03477463)
+
+[node name="shoulder_pole_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r/shoulder_r/shoulder_track_pole_r" index="0" unique_id=1882519631]
+transform = Transform3D(-0.97064084, -0.007975981, -0.24040112, -0.0069124913, 0.99996203, -0.00526676, 0.24043405, -0.0034503613, -0.9706593, 0.0017185613, 0.05747177, -0.17388372)
+
+[node name="Sub_Armpit2_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r/shoulder_r" parent_id_path=PackedInt32Array(1081795365) index="4" unique_id=1615453208]
+transform = Transform3D(-0.22681321, -0.09881206, 0.9689127, -0.95245963, -0.18527386, -0.2418563, 0.20341256, -0.9777064, -0.052091934, 0.019383907, 0.09184359, -0.05273302)
+
+[node name="Sub_Armpit1_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r/shoulder_r" parent_id_path=PackedInt32Array(1081795365) index="5" unique_id=1365512044]
+transform = Transform3D(-0.2650114, -0.27806354, 0.92328197, -0.9134653, -0.234236, -0.33273822, 0.30878833, -0.9315652, -0.19192623, -0.03734183, 0.08002426, -0.03848228)
+
+[node name="arm_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r" parent_id_path=PackedInt32Array(2035403215) index="2" unique_id=1488990671]
+transform = Transform3D(0.935104, -0.041284904, 0.35196033, -0.18047422, 0.7992615, 0.57324517, -0.30497473, -0.59956366, 0.7399417, -2.8951774e-10, 0.08656909, 5.2416e-08)
+
+[node name="arm_pole_line_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r/arm_r/c_stretch_arm_r" parent_id_path=PackedInt32Array(1397913810) index="0" unique_id=211881938]
+transform = Transform3D(-0.66811407, -0.00840323, 0.74401146, 0.005988609, -0.9999648, -0.005916385, 0.7440349, 0.0005027737, 0.66814065, 4.5634806e-08, -2.2351742e-08, -5.5064447e-08)
+
+[node name="arm_twist_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R/c_shoulder_r" parent_id_path=PackedInt32Array(2035403215) index="4" unique_id=636781892]
+transform = Transform3D(0.93510395, -0.04128483, 0.35196054, -0.18047446, 0.7992614, 0.5732453, -0.30497485, -0.5995639, 0.73994154, -2.8951774e-10, 0.08656909, 5.2416e-08)
+
+[node name="c_arm_fk_r" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_R" parent_id_path=PackedInt32Array(15616291) index="3" unique_id=104223457]
+transform = Transform3D(-0.92411095, 0.0059635923, -0.38207716, -0.28676054, -0.67168206, 0.6830894, -0.2525608, 0.74081516, 0.622419, -0.004110236, -0.008095512, 0.086091645)
+
+[node name="arm_ik_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l" parent_id_path=PackedInt32Array(1992177756) index="0" unique_id=2066113027]
+transform = Transform3D(0.93510425, 0.04128412, -0.35195982, 0.1804719, 0.79926646, 0.5732389, 0.3049754, -0.59955686, 0.7399469, 3.697096e-10, 0.0865689, -2.2962922e-08)
+
+[node name="arm_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l" parent_id_path=PackedInt32Array(1992177756) index="1" unique_id=477169072]
+transform = Transform3D(0.93510425, 0.04128412, -0.35195982, 0.1804719, 0.79926646, 0.5732389, 0.3049754, -0.59955686, 0.7399469, 3.697096e-10, 0.0865689, -2.2962922e-08)
+
+[node name="c_stretch_arm_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l/arm_l" index="0" unique_id=335857126]
+transform = Transform3D(-0.00021945097, 0.99950796, -0.03135472, 8.696547e-08, -0.031354718, -0.99950814, -0.9999998, -0.00021934576, 6.7939027e-06, 1.8626451e-08, 0.21829587, 8.6613e-08)
+
+[node name="arm_pole_line_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l/arm_l/c_stretch_arm_l" index="0" unique_id=1546974372]
+transform = Transform3D(-0.6681148, 0.008400897, -0.7440108, -0.0059888465, -0.99996454, -0.005913037, -0.7440341, 0.0005051791, 0.6681414, -3.0733645e-08, -2.9802322e-08, 4.1676685e-08)
+
+[node name="shoulder_track_pole_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l/shoulder_l" parent_id_path=PackedInt32Array(667813936) index="0" unique_id=1745409859]
+transform = Transform3D(0.9354488, 0.032609917, -0.3519545, 0.18676764, 0.7997753, 0.570506, 0.30008867, -0.5994128, 0.74205846, 2.4475924e-08, 0.040017784, 0.034774203)
+
+[node name="arm_twist_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L/c_shoulder_l" parent_id_path=PackedInt32Array(1992177756) index="4" unique_id=913277924]
+transform = Transform3D(0.9351042, 0.04128417, -0.35195976, 0.18047184, 0.79926646, 0.5732389, 0.3049754, -0.59955686, 0.7399469, 3.697096e-10, 0.0865689, -2.2962922e-08)
+
+[node name="c_arm_fk_l" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/肩P_L" parent_id_path=PackedInt32Array(472408174) index="3" unique_id=681652720]
+transform = Transform3D(0.92411125, 0.0059635937, -0.38207677, 0.28676027, -0.67168206, 0.6830898, -0.25256047, -0.7408155, -0.62241906, -0.004110179, -0.00809669, -0.0860914)
+
+[node name="胸上_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/おっぱい調整" parent_id_path=PackedInt32Array(1309034941) index="2" unique_id=1408164143]
+transform = Transform3D(-0.90914625, -0.11452753, -0.40042037, -0.4004263, -0.023969742, 0.91601527, -0.11450698, 0.9931307, -0.024067836, -0.065344766, 0.008524653, -0.007750703)
+
+[node name="胸上2_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x" parent_id_path=PackedInt32Array(2140255685) index="4" unique_id=563326563]
+transform = Transform3D(0.9998993, -0.009538925, -0.010507696, -0.0091705555, -0.9993605, 0.03456428, -0.010830681, -0.034464438, -0.9993474, 0.07377535, 0.052719366, 0.06879261)
+
+[node name="胸先_L" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/胸上2_L" index="0" unique_id=1404408012]
+transform = Transform3D(0.9998994, -0.010462491, -0.009590607, -0.009540584, -0.99575084, 0.09159415, -0.010507973, -0.09149181, -0.99576795, 2.0023435e-08, 0.06648535, 1.7520506e-08)
+
+[node name="胸上2_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x" parent_id_path=PackedInt32Array(2140255685) index="5" unique_id=1708800731]
+transform = Transform3D(0.9998994, 0.009542846, 0.010503887, 0.009174607, -0.99936044, 0.034564305, 0.010827007, -0.034464445, -0.9993476, -0.07377598, 0.052719057, 0.06879289)
+
+[node name="胸先_R" parent="char_grp/rig/c_pos/c_traj/c_root_master_x/c_spine_01_x/c_spine_02_x/c_spine_03_x/spine_03_x/胸上2_R" index="0" unique_id=1382730795]
+transform = Transform3D(0.9998994, 0.010462708, 0.009590371, 0.009540821, -0.99575084, 0.09159418, 0.010507757, -0.09149183, -0.9957681, -2.4272595e-08, 0.06648536, 1.839362e-08)
+
+[node name="Skn_B_HairA_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="3" unique_id=1083796005]
+transform = Transform3D(0.9742002, -0.18762536, -0.1254206, -0.12542088, -0.9121106, 0.3902864, -0.18762521, -0.36448702, -0.91211003, -0.048085272, 0.027010798, -0.05697389)
+
+[node name="Ctr_L_Hair_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="4" unique_id=916662383]
+transform = Transform3D(0.9990193, 0.033171512, 0.029370021, 0.029364346, -0.99212956, 0.121725775, 0.03317616, -0.120741725, -0.99214673, 0.07137782, 0.112175345, 0.061802685)
+
+[node name="Ctr_R_Hair_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="5" unique_id=175550529]
+transform = Transform3D(0.99901813, -0.033171017, -0.029363794, -0.029364545, -0.99212974, 0.121722095, -0.033170383, -0.12074053, -0.99212825, -0.071377456, 0.112175345, 0.061802678)
+
+[node name="Ctr_L_HairtieC_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="13" unique_id=98791745]
+transform = Transform3D(0.9431467, 0.28799686, 0.16592824, 0.16592824, -0.8405278, 0.5157334, 0.2879969, -0.45888, -0.8405279, 0.07837969, 0.15224278, 0.012437166)
+
+[node name="Ctr_L_HairtieB_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="15" unique_id=308226314]
+transform = Transform3D(0.86950314, 0.37266123, 0.3241721, 0.32417205, -0.92574304, 0.1947107, 0.37266114, -0.06421404, -0.925743, 0.08382522, 0.14903164, 0.031274863)
+
+[node name="Ctr_BL_HairtieA_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="16" unique_id=2139669158]
+transform = Transform3D(0.4474001, 0.86143726, 0.24033034, 0.24056236, -0.37473872, 0.8953773, 0.86137253, -0.34277752, -0.37488765, 0.00858506, 0.05472052, -0.10930437)
+
+[node name="Ctr_BR_HairtieB_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="17" unique_id=2065073683]
+transform = Transform3D(0.91930974, -0.3370423, -0.20315424, -0.20315468, -0.84857595, 0.4885148, -0.33704203, -0.40782487, -0.8485759, -0.0148703, 0.042621493, -0.10906273)
+
+[node name="Ctr_BR_HairtieA_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="18" unique_id=2048648201]
+transform = Transform3D(0.44741753, -0.8614342, -0.24030931, -0.24061595, -0.3747461, 0.8953599, -0.86134857, -0.3427775, -0.3749428, -0.0085849, 0.054720163, -0.10930437)
+
+[node name="Ctr_BL_HairtieB_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="19" unique_id=591395117]
+transform = Transform3D(0.9193099, 0.3370425, 0.20315503, 0.20315483, -0.84857637, 0.4885144, 0.33704272, -0.40782404, -0.8485764, 0.014870449, 0.042621493, -0.1090627)
+
+[node name="Ctr_BL_HairtieC_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="20" unique_id=79512005]
+transform = Transform3D(0.9882089, 0.12723996, 0.085167006, 0.08516597, -0.9190399, 0.38485485, 0.12724054, -0.37306294, -0.91904145, 0.0039351, 0.034733295, -0.118861794)
+
+[node name="Ctr_BR_HairtieC_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="21" unique_id=636827195]
+transform = Transform3D(0.98820895, -0.12723793, -0.085163765, -0.08516502, -0.91903937, 0.38485444, -0.12723716, -0.37306452, -0.9190376, -0.00393492, 0.034732938, -0.118861794)
+
+[node name="Skn_B_HairB_01" parent="char_grp/rig/c_pos/c_traj/head_scale_fix_x/c_head_x/head_x" parent_id_path=PackedInt32Array(911143722) index="28" unique_id=1105235470]
+transform = Transform3D(0.9741722, 0.18762372, 0.12564212, 0.12533051, -0.9121107, 0.39031577, 0.18783201, -0.36448795, -0.91206783, 0.04808524, 0.027010798, -0.056973882)
+
+[node name="foot_ik_r" parent="char_grp/rig/c_foot_ik_r" parent_id_path=PackedInt32Array(926654567) index="1" unique_id=654177061]
+transform = Transform3D(1, -3.761236e-06, 7.3129095e-06, 8.05893e-08, 0.89371186, 0.4486412, -8.22308e-06, -0.44864118, 0.8937119, 7.1648287e-09, -1.397351e-09, -5.231424e-10)
+
+[node name="c_toes_track_r" parent="char_grp/rig/c_foot_ik_r/foot_ik_r" index="0" unique_id=1150514874]
+transform = Transform3D(5.523351e-07, -1.1217952e-08, 0.99999994, -4.324608e-08, 1.0000001, 1.1217973e-08, -1.0000001, -4.3246086e-08, 5.52335e-07, -7.522933e-09, 0.0975168, -4.656613e-10)
+
+[node name="toes_01_ik_r" parent="char_grp/rig/c_foot_ik_r/foot_ik_r/c_toes_track_r" index="0" unique_id=1200012419]
+transform = Transform3D(-2.1894784e-06, -3.834685e-08, 0.99999994, 7.800053e-10, 0.9999999, 3.834685e-08, -0.9999999, 7.800892e-10, -2.1894784e-06, -5.122274e-09, -3.7252903e-09, 3.995541e-09)
+
+[node name="c_toes_end_r" parent="char_grp/rig/c_foot_ik_r/c_foot_bank_01_r/c_foot_bank_02_r/c_foot_heel_r" parent_id_path=PackedInt32Array(1910268066) index="0" unique_id=1036140448]
+transform = Transform3D(-0.99999994, -9.426272e-06, -1.6541917e-05, -1.002987e-06, 0.8937121, -0.44864115, 1.9012721e-05, -0.4486412, -0.893712, -4.648181e-07, 0.13072787, -0.021875026)
+
+[node name="c_foot_01_r" parent="char_grp/rig/c_foot_ik_r/c_foot_bank_01_r/c_foot_bank_02_r/c_foot_heel_r/c_toes_end_r" index="1" unique_id=828023977]
+transform = Transform3D(-0.9999999, 1.6234812e-07, -2.5351817e-06, 1.62348e-07, 0.99999994, 4.55186e-08, 2.5351815e-06, 4.5518185e-08, -1, 1.8168755e-09, -0.048758384, 2.0954758e-09)
+
+[node name="c_toes_end_01_r" parent="char_grp/rig/c_foot_ik_r/c_foot_bank_01_r/c_foot_bank_02_r/c_foot_heel_r/c_toes_end_r" index="2" unique_id=1296235622]
+transform = Transform3D(-0.9920854, -3.7089055e-07, -0.12556444, 0.12556444, 2.9388036e-07, -0.9920854, 4.0485608e-07, -0.99999994, -2.4498377e-07, 4.4299746e-09, -4.0745363e-09, 2.3283064e-09)
+
+[node name="c_foot_roll_cursor_r" parent="char_grp/rig/c_foot_ik_r/c_foot_roll_r" parent_id_path=PackedInt32Array(576632282) index="0" unique_id=1388920807]
+transform = Transform3D(-1, -8.742278e-08, 1.271531e-07, 8.742278e-08, -1, -7.450579e-09, 1.271531e-07, -7.4505677e-09, 1, -0.029255053, 0.029255029, -5.697146e-09)
+
+[node name="c_foot_ik_l" parent="char_grp/rig" parent_id_path=PackedInt32Array(1887674156) index="3" unique_id=422016153]
+transform = Transform3D(-0.9969892, 0.077658966, 3.3945815e-09, 0, -4.3711385e-08, 1, 0.07765969, 0.99697995, 4.357938e-08, 0.065205544, 0.061512504, -0.038417663)
+
+[node name="foot_ik_l" parent="char_grp/rig/c_foot_ik_l" index="1" unique_id=1892885511]
+transform = Transform3D(0.9999999, 9.617015e-06, -1.9310937e-05, 6.883919e-08, 0.893712, 0.44864115, 2.1573003e-05, -0.44864115, 0.893712, 1.078115e-08, 4.1900075e-09, 5.812403e-09)
+
+[node name="c_toes_track_l" parent="char_grp/rig/c_foot_ik_l/foot_ik_l" index="0" unique_id=254714508]
+transform = Transform3D(-8.7817637e-07, 9.272425e-08, 0.99999994, 8.580613e-09, 0.9999998, -9.272425e-08, -0.99999994, 8.58053e-09, -8.7817637e-07, -4.850482e-09, 0.09751679, -5.355105e-09)
+
+[node name="toes_01_ik_l" parent="char_grp/rig/c_foot_ik_l/foot_ik_l/c_toes_track_l" index="0" unique_id=531240993]
+transform = Transform3D(-7.5896713e-07, 4.298024e-08, 1, 2.9892e-10, 1.0000001, -4.2980236e-08, -1, 2.9888741e-10, -7.5896713e-07, -2.7939677e-09, -1.3969839e-09, 5.266048e-09)
+
+[node name="c_hand_ik_l" parent="char_grp/rig" parent_id_path=PackedInt32Array(1887674156) index="6" unique_id=264995285]
+transform = Transform3D(-0.5437958, 0.8389533, -0.021054337, -0.8392174, -0.54362464, 0.013642971, 1.5925615e-07, 0.025088158, 0.9996852, 0.3969626, 0.93117017, -0.023570206)
+
+[node name="foot_ref_r" parent="char_grp/rig/root_ref_x/thigh_ref_r/leg_ref_r" parent_id_path=PackedInt32Array(1309851728) index="3" unique_id=1921278928]
+transform = Transform3D(-0.28399915, -0.88715696, -0.36372584, -0.014366927, 0.3832403, -0.9235367, 0.95871675, -0.25705802, -0.12158565, -3.7252903e-09, 0.38725826, 3.5215635e-09)
+
+[node name="foot_bank_01_ref_l" parent="char_grp/rig/root_ref_x/thigh_ref_l/leg_ref_l" parent_id_path=PackedInt32Array(2024296313) index="0" unique_id=344144656]
+transform = Transform3D(-0.2839935, 0.9560468, -0.07295521, 0.014387336, -0.07183048, -0.997313, -0.95871824, -0.28428012, 0.0066444227, 0.01149983, 0.43047047, 0.027755745)
+
+[node name="foot_bank_02_ref_l" parent="char_grp/rig/root_ref_x/thigh_ref_l/leg_ref_l" parent_id_path=PackedInt32Array(2024296313) index="1" unique_id=34252778]
+transform = Transform3D(-0.2839943, 0.95604634, -0.072956026, 0.014387499, -0.07183129, -0.9973128, -0.9587179, -0.2842809, 0.0066445586, -0.0051167873, 0.431311, -0.028338872)
+
+[node name="foot_heel_ref_l" parent="char_grp/rig/root_ref_x/thigh_ref_l/leg_ref_l" parent_id_path=PackedInt32Array(2024296313) index="2" unique_id=1187950519]
+transform = Transform3D(-0.28399262, 0.9560468, -0.07295437, 0.0143870525, -0.07182967, -0.99731296, -0.9587184, -0.2842791, 0.006644399, 0.0031915214, 0.43089074, -0.0002915626)
+
+[node name="c_p_neck_01_x" parent="char_grp/rig" parent_id_path=PackedInt32Array(1887674156) index="10" unique_id=195339887]
+transform = Transform3D(-0.9989461, -2.5907718e-06, -0.045897994, -0.045897994, -2.0062652e-09, 0.9989461, -2.5881334e-06, 1, -1.1690708e-07, 7.3153234e-07, 1.2353046, 0.030184418)
+
+[node name="rigidbodies" parent="薇薇安" parent_id_path=PackedInt32Array(79892175) index="1" unique_id=62256431]
+visible = false
+
+[node name="cage-胸上2_L" parent="薇薇安/薇薇安_arm/Skeleton3D" parent_id_path=PackedInt32Array(255782090) index="0" unique_id=592041964]
+visible = false
+
+[node name="cage-胸上2_R" parent="薇薇安/薇薇安_arm/Skeleton3D" parent_id_path=PackedInt32Array(255782090) index="1" unique_id=1830933553]
+visible = false
+
+[node name="cage-Group_001_L" parent="薇薇安/薇薇安_arm/Skeleton3D" parent_id_path=PackedInt32Array(255782090) index="2" unique_id=1694570729]
+visible = false
+
+[node name="cage-Group_001_R" parent="薇薇安/薇薇安_arm/Skeleton3D" parent_id_path=PackedInt32Array(255782090) index="3" unique_id=220093249]
+visible = false
+
+[node name="薇薇安_mesh" parent="薇薇安/薇薇安_arm/Skeleton3D" parent_id_path=PackedInt32Array(255782090) index="4" unique_id=1111499914]
+surface_material_override/0 = SubResource("ShaderMaterial_23tpf")
+
+[node name="Cylinder" parent="." index="4" unique_id=36948834]
+visible = false
+
+[node name="Cube_001" parent="." index="5" unique_id=1238100502]
+transform = Transform3D(0.07999998, 0, 0, 0, 0.07999998, 0, 0, 0, 0.07999998, 3.626049e-17, 0.67195535, 0.01095254)
+visible = false
