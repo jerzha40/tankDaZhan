@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dryqvvlgd27lp"]
+
+[ext_resource type="Shader" uid="uid://cyunvsoagers8" path="res://dot_matrix.gdshader" id="1_4yg5a"]
+[ext_resource type="Texture2D" uid="uid://dfigufpg4mp8h" path="res://icon.svg" id="1_l8s1l"]
+[ext_resource type="Texture2D" uid="uid://i5t864qn4f88" path="res://Textures/tex_Lit.png" id="2_fa814"]
+[ext_resource type="Texture2D" uid="uid://hxaj34bne4jp" path="res://Textures/tex_Unlit.png" id="3_evppr"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fa814"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_evppr"]
+noise = SubResource("FastNoiseLite_fa814")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yg5a"]
+shader = ExtResource("1_4yg5a")
+shader_parameter/unlitTexture = ExtResource("3_evppr")
+shader_parameter/litTexture = ExtResource("2_fa814")
+shader_parameter/binaryDataTexture = SubResource("NoiseTexture2D_evppr")
+shader_parameter/gridWidth = 64
+
+[node name="DotMat" type="Node2D" unique_id=678007821]
+
+[node name="Renderer" type="Sprite2D" parent="." unique_id=223643638]
+material = SubResource("ShaderMaterial_4yg5a")
+position = Vector2(959.99994, 540)
+scale = Vector2(15, 15)
+texture = ExtResource("1_l8s1l")
+metadata/_edit_lock_ = true
