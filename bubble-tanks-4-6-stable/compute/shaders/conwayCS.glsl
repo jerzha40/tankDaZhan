@@ -1,14 +1,15 @@
+#[compute]
 #version 450
 
 const int grid_width = 64;
 
-const vec4 live_color = vec4(0.0, 1.0, 0.0, 1.0);
-const vec4 dead_color = vec4(1.0, 0.0, 0.0, 1.0);
+const vec4 live_color = vec4(1.0, 0.0, 0.0, 1.0);
+const vec4 dead_color = vec4(0.0, 0.0, 0.0, 1.0);
 
 layout(local_size_x = 32, local_size_y = 32) in;
 
 layout(binding=0,rgba32f) uniform image2D input_world;
-layout(binding=1,rgba32f) uniform image2D ouput_world;
+layout(binding=1,rgba32f) uniform image2D output_world;
 
 bool is_cell_alive(int x, int y)
 {
@@ -23,7 +24,7 @@ int get_live_neighbors(int x, int y)
     {
         for (int j = -1; j <= 1; j++)
         {
-            if (x == 0 && y == 0)
+            if (i == 0 && j == 0)
             {
                 continue;
             }
@@ -59,5 +60,5 @@ void main()
 
     vec4 new_color = next_state ? live_color : dead_color;
 
-    imageStore(ouput_world, p, new_color);
+    imageStore(output_world, p, new_color);
 }
