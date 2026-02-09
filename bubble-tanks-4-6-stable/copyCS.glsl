@@ -1,3 +1,4 @@
+#[compute]
 #version 450
 
 const int cell_size_a=32;

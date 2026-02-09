@@ -3,8 +3,8 @@
 [ext_resource type="Shader" uid="uid://cyunvsoagers8" path="res://dot_matrix.gdshader" id="1_4yg5a"]
 [ext_resource type="Texture2D" uid="uid://dfigufpg4mp8h" path="res://icon.svg" id="1_l8s1l"]
 [ext_resource type="Script" uid="uid://bsvmn335g1ko0" path="res://dot_mat.gd" id="1_rscxk"]
-[ext_resource type="Texture2D" uid="uid://i5t864qn4f88" path="res://Textures/tex_Lit.png" id="2_fa814"]
-[ext_resource type="Texture2D" uid="uid://hxaj34bne4jp" path="res://Textures/tex_Unlit.png" id="3_evppr"]
+[ext_resource type="Texture2D" uid="uid://dnejj36xccett" path="res://circle.png" id="3_evppr"]
+[ext_resource type="Texture2D" uid="uid://dwymeokktkta5" path="res://ball.png" id="4_xw3lj"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_fa814"]
 
@@ -15,8 +15,8 @@ noise = SubResource("FastNoiseLite_fa814")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4yg5a"]
 shader = ExtResource("1_4yg5a")
-shader_parameter/unlitTexture = ExtResource("3_evppr")
-shader_parameter/litTexture = ExtResource("2_fa814")
+shader_parameter/unlitTexture = ExtResource("4_xw3lj")
+shader_parameter/litTexture = ExtResource("3_evppr")
 shader_parameter/binaryDataTexture = SubResource("NoiseTexture2D_evppr")
 shader_parameter/gridWidth = 64
 
