@@ -1,8 +1,6 @@
 #[compute]
 #version 450
 
-const int grid_width = 64;
-
 const vec4 live_color = vec4(1.0, 0.0, 0.0, 1.0);
 const vec4 dead_color = vec4(0.0, 0.0, 0.0, 1.0);
 
@@ -19,6 +17,7 @@ bool is_cell_alive(int x, int y)
 
 int get_live_neighbors(int x, int y)
 {
+    ivec2 world_size = imageSize(input_world);
     int count = 0;
     for (int i = -1; i <= 1; i++)
     {
@@ -30,7 +29,7 @@ int get_live_neighbors(int x, int y)
             }
             int nx = x + i;
             int ny = y + j;
-            if (nx >= 0 && nx < grid_width && ny >= 0 && ny < grid_width)
+            if (nx >= 0 && nx < world_size.x && ny >= 0 && ny < world_size.y)
             {
                 count += int(is_cell_alive(nx, ny));
             }
@@ -41,8 +40,9 @@ int get_live_neighbors(int x, int y)
 
 void main()
 {
+    ivec2 world_size = imageSize(input_world);
     ivec2 p = ivec2(gl_GlobalInvocationID.xy);
-    if (p.x >= grid_width || p.y >= grid_width)
+    if (p.x >= world_size.x || p.y >= world_size.y)
     {
         return;
     }
