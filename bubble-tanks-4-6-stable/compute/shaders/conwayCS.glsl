@@ -1,4 +1,3 @@
-#[compute]
 #version 450
 
 const int grid_width = 64;

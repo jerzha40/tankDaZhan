@@ -8,7 +8,19 @@
 		</pass>
 		<pass name="conway" type="compute" active="true">
 			<shader type="cs" path="shaders\conwayCS.glsl" entry="main" />
-			<groupsize x="4" y="4" z="1" />
+			<groupsize x="20" y="20" z="1" />
+			<macros />
+		</pass>
+		<pass name="generate_random" type="compute" active="true">
+			<shader type="cs" path="shaders\generate_randomCS.glsl" entry="main" />
+			<groupsize x="64" y="64" z="1" />
+			<variables>
+				<variable type="float" name="cell_size">
+					<row>
+						<value>0.5</value>
+					</row>
+				</variable>
+			</variables>
 			<macros />
 		</pass>
 		<pass name="Simple" type="shader" active="true" patchverts="1">
@@ -34,23 +46,20 @@
 	</pipeline>
 	<objects>
 		<object type="image" name="ComputeOutput" width="512" height="512" format="R32G32B32A32_FLOAT" />
-		<object type="image" name="ddfs" width="128" height="128" format="R32G32B32A32_FLOAT">
-			<bind slot="1" name="conway" uav="1" />
+		<object type="image" name="ddfs" width="128" height="128" format="R32G32B32A32_FLOAT" />
+		<object type="image" name="inp" width="128" height="128" format="R8_INT" />
+		<object type="texture" path="..\..\..\..\..\..\workspace-programming\shadered-env\SHADERed\SHADERed\rr.png" vflip="false" min_filter="Nearest" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
+		<object type="image" name="random_pixel" width="16" height="16" format="R32G32B32A32_FLOAT">
+			<bind slot="0" name="generate_random" uav="1" />
 			<bind slot="0" name="Simple" uav="0" />
 		</object>
-		<object type="image" name="inp" width="128" height="128" format="R8_INT">
-			<bind slot="0" name="Compute" uav="1" />
-			<bind slot="0" name="conway" uav="1" />
-		</object>
-		<object type="texture" path="D:\workspace-programming\shadered-env\SHADERed\SHADERed\rr.png" vflip="false" min_filter="Nearest" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
+		<object type="buffer" name="cell_size" size="4" format="float" pausedpreview="false" />
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="property" name="D:\workspace-programming\shadered-env\SHADERed\SHADERed\rr.png" item="image3D" />
+		<entry type="property" name="generate_random" item="pipe" />
+		<entry type="file" name="generate_random" shader="cs" />
 		<entry type="file" name="conway" shader="cs" />
-		<entry type="file" name="Simple" shader="vs" />
-		<entry type="file" name="Simple" shader="ps" />
-		<entry type="file" name="Compute" shader="cs" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
 			<pitch>28</pitch>
