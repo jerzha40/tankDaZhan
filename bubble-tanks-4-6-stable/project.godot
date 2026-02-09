@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="bubble-tanks-4_6_stable"
+run/main_scene="uid://dryqvvlgd27lp"
 config/features=PackedStringArray("4.6")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [display]
@@ -33,3 +35,4 @@ folder_colors={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

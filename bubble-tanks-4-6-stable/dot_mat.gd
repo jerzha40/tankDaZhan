@@ -7,6 +7,8 @@ const ComputePassScript = preload("res://compute_pass.gd")
 @export_file("*.glsl", "*.gdshader", "*.res") var copy_shader_path: String = "res://copyCS.glsl"
 @export_range(1, 4096, 1) var grid_width: int = 64
 @export_range(1, 256, 1) var compute_local_size: int = 32
+@export var auto_run: bool = true
+@export_range(0.01, 10.0, 0.01) var auto_step_interval_sec: float = 0.5
 @export var run_once_on_ready: bool = false
 @export var renderer_path: NodePath = ^"Renderer"
 
@@ -22,6 +24,7 @@ var render_texture: ImageTexture
 @onready var renderer: Sprite2D = get_node_or_null(renderer_path)
 
 var pending_gpu_work: bool = false
+var auto_step_accum: float = 0.0
 var texture_usage: int = (
 	RenderingDevice.TEXTURE_USAGE_STORAGE_BIT
 	| RenderingDevice.TEXTURE_USAGE_CAN_UPDATE_BIT
@@ -51,6 +54,19 @@ func _input(event: InputEvent) -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_PREDELETE:
 		cleanup_gpu()
+
+
+func _process(delta: float) -> void:
+	if not auto_run:
+		return
+	if not is_compute_ready():
+		return
+
+	auto_step_accum += delta
+	var interval: float = float(max(auto_step_interval_sec, 0.01))
+	while auto_step_accum >= interval:
+		auto_step_accum -= interval
+		step_once()
 
 
 func setup_compute_passes() -> void:
@@ -145,7 +161,7 @@ func step_once() -> void:
 	rd.submit()
 	pending_gpu_work = true
 
-	rd.sync()
+	rd.sync ()
 	pending_gpu_work = false
 	var bytes := rd.texture_get_data(output_texture, 0)
 	output_image.set_data(grid_width, grid_width, false, Image.FORMAT_RGBAF, bytes)
@@ -175,7 +191,7 @@ func cleanup_gpu() -> void:
 		return
 
 	if pending_gpu_work:
-		rd.sync()
+		rd.sync ()
 		pending_gpu_work = false
 
 	if main_compute_pass != null:

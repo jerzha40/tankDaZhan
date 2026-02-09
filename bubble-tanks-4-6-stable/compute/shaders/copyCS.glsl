@@ -9,11 +9,6 @@ layout(binding=1,rgba32f) uniform image2D output_world;
 void main()
 {
     ivec2 p = ivec2(gl_GlobalInvocationID.xy);
-    ivec2 world_size = imageSize(input_world);
-    if (p.x >= world_size.x || p.y >= world_size.y)
-    {
-        return;
-    }
 
     vec4 a = imageLoad(input_world, p);
 

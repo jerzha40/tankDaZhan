@@ -6,7 +6,7 @@
 			<groupsize x="4" y="4" z="1" />
 			<macros />
 		</pass>
-		<pass name="generate_random" type="compute" active="false">
+		<pass name="generate_random" type="compute" active="true">
 			<shader type="cs" path="shaders\generate_randomCS.glsl" entry="main" />
 			<groupsize x="64" y="64" z="1" />
 			<variables>
