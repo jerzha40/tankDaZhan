@@ -1,17 +1,12 @@
 <?xml version="1.0"?>
 <project version="2">
 	<pipeline>
-		<pass name="Compute" type="compute" active="true">
+		<pass name="Compute" type="compute" active="false">
 			<shader type="cs" path="shaders\compute.glsl" entry="main" />
 			<groupsize x="4" y="4" z="1" />
 			<macros />
 		</pass>
-		<pass name="conway" type="compute" active="true">
-			<shader type="cs" path="shaders\conwayCS.glsl" entry="main" />
-			<groupsize x="20" y="20" z="1" />
-			<macros />
-		</pass>
-		<pass name="generate_random" type="compute" active="true">
+		<pass name="generate_random" type="compute" active="false">
 			<shader type="cs" path="shaders\generate_randomCS.glsl" entry="main" />
 			<groupsize x="64" y="64" z="1" />
 			<variables>
@@ -21,6 +16,16 @@
 					</row>
 				</variable>
 			</variables>
+			<macros />
+		</pass>
+		<pass name="conway" type="compute" active="true">
+			<shader type="cs" path="shaders\conwayCS.glsl" entry="main" />
+			<groupsize x="64" y="64" z="1" />
+			<macros />
+		</pass>
+		<pass name="copy" type="compute" active="true">
+			<shader type="cs" path="shaders\copyCS.glsl" entry="main" />
+			<groupsize x="64" y="64" z="1" />
 			<macros />
 		</pass>
 		<pass name="Simple" type="shader" active="true" patchverts="1">
@@ -49,17 +54,26 @@
 		<object type="image" name="ddfs" width="128" height="128" format="R32G32B32A32_FLOAT" />
 		<object type="image" name="inp" width="128" height="128" format="R8_INT" />
 		<object type="texture" path="..\..\..\..\..\..\workspace-programming\shadered-env\SHADERed\SHADERed\rr.png" vflip="false" min_filter="Nearest" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
-		<object type="image" name="random_pixel" width="16" height="16" format="R32G32B32A32_FLOAT">
-			<bind slot="0" name="generate_random" uav="1" />
-			<bind slot="0" name="Simple" uav="0" />
-		</object>
+		<object type="image" name="random_pixel" width="16" height="16" format="R32G32B32A32_FLOAT" />
 		<object type="buffer" name="cell_size" size="4" format="float" pausedpreview="false" />
+		<object type="image" name="output" width="128" height="128" format="R32G32B32A32_FLOAT">
+			<bind slot="1" name="conway" uav="1" />
+			<bind slot="0" name="copy" uav="1" />
+		</object>
+		<object type="texture" path="buffers\init.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
+		<object type="texture" path="buffers\st1.png" vflip="false" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
+		<object type="image" name="innput" width="128" height="128" format="R32G32B32A32_FLOAT">
+			<bind slot="0" name="generate_random" uav="1" />
+			<bind slot="0" name="conway" uav="1" />
+			<bind slot="1" name="copy" uav="1" />
+		</object>
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="property" name="generate_random" item="pipe" />
-		<entry type="file" name="generate_random" shader="cs" />
+		<entry type="property" name="output" item="image" />
 		<entry type="file" name="conway" shader="cs" />
+		<entry type="file" name="copy" shader="cs" />
+		<entry type="file" name="generate_random" shader="cs" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
 			<pitch>28</pitch>
