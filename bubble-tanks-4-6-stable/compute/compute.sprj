@@ -6,7 +6,7 @@
 			<groupsize x="4" y="4" z="1" />
 			<macros />
 		</pass>
-		<pass name="generate_random" type="compute" active="true">
+		<pass name="generate_random" type="compute" active="false">
 			<shader type="cs" path="shaders\generate_randomCS.glsl" entry="main" />
 			<groupsize x="64" y="64" z="1" />
 			<variables>
@@ -70,10 +70,10 @@
 	</objects>
 	<cameras />
 	<settings>
-		<entry type="property" name="output" item="image" />
+		<entry type="property" name="copy" item="pipe" />
+		<entry type="file" name="generate_random" shader="cs" />
 		<entry type="file" name="conway" shader="cs" />
 		<entry type="file" name="copy" shader="cs" />
-		<entry type="file" name="generate_random" shader="cs" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
 			<pitch>28</pitch>
